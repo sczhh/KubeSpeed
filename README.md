@@ -66,18 +66,6 @@
 - **内存**: 建议 4GB 以上
 - **磁盘空间**: 约 150MB
 
-## 📦 安装方式
-
-### 方式一：MSI 安装包（推荐）
-1. 从 [Releases](../../releases) 页面下载 `KubeSpeed-Setup-x64.msi`
-2. 双击运行安装程序
-3. 按照向导完成安装
-4. 从开始菜单或桌面快捷方式启动应用
-
-### 方式二：便携版
-1. 从 [Releases](../../releases) 页面下载 `KubeSpeed-Portable-x64.zip`
-2. 解压到任意目录
-3. 运行 `KubeSpeed.Desktop.exe`
 
 ## 🚀 快速开始
 
@@ -92,64 +80,6 @@
 3. 等待连接建立和资源加载完成
 4. 开始管理你的 Kubernetes 资源！
 
-## 🏗️ 项目结构
-
-```
-KubeSpeed/
-├── KubeSpeed/                 # 主应用程序
-├── KubeSpeed.Core/           # 核心 UI 组件
-├── KubeSpeed.Features/       # 功能模块
-├── KubeSpeed.Services/       # K8s 服务层
-├── KubeSpeed.Common/         # 公共组件
-├── KubeSpeed.Repository/     # 数据仓库层
-├── KubeSpeed.Resource/       # 资源文件
-├── KubeSpeed.Desktop/        # 桌面应用入口
-├── KubeSpeed.Browser/        # Web 版本（开发中）
-├── KubeSpeed.Android/        # Android 版本（计划中）
-├── KubeSpeed.iOS/           # iOS 版本（计划中）
-└── KubeSpeed.Installer/     # 安装包项目
-```
-
-## 🔧 开发环境
-
-### 环境要求
-- Visual Studio 2022 或 JetBrains Rider
-- .NET 9 SDK
-- Git
-
-### 构建步骤
-```bash
-# 克隆仓库
-git clone <repository-url>
-cd KubeSpeed
-
-# 还原依赖
-dotnet restore
-
-# 构建项目
-dotnet build
-
-# 运行桌面版
-dotnet run --project KubeSpeed.Desktop
-```
-
-### 打包发布
-```bash
-# 构建 Release 版本
-dotnet publish KubeSpeed.Desktop\KubeSpeed.Desktop.csproj -c Release -r win-x64 --self-contained true -p:PublishSingleFile=true
-
-# 构建 MSI 安装包（需要 WiX Toolset）
-.\build-msi-x64.bat
-
-# 构建便携版
-.\build-portable.ps1
-```
-
-## 🔒 安全特性
-
-- **代码混淆** - Release 版本包含代码混淆保护
-- **数字签名** - 安装包经过数字签名验证
-- **本地存储** - 敏感配置信息本地加密存储
 
 ## 🐛 已知问题
 
